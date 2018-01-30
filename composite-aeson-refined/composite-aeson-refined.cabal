@@ -1,6 +1,8 @@
--- This file has been generated from package.yaml by hpack version 0.17.0.
+-- This file has been generated from package.yaml by hpack version 0.20.0.
 --
 -- see: https://github.com/sol/hpack
+--
+-- hash: e26e6dc840153d2f4cfb45f8925c55e753a724a20424eb95cc11d495a5fbcc72
 
 name:           composite-aeson-refined
 version:        0.4.2.0
@@ -22,10 +24,12 @@ library
   ghc-options: -Wall -O2
   build-depends:
       aeson-better-errors
-    , base >= 4.7 && < 5
+    , base >=4.7 && <5
     , composite-aeson
     , mtl
     , refined
   exposed-modules:
       Composite.Aeson.Refined
+  other-modules:
+      Paths_composite_aeson_refined
   default-language: Haskell2010

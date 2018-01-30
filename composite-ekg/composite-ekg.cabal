@@ -1,6 +1,8 @@
--- This file has been generated from package.yaml by hpack version 0.17.0.
+-- This file has been generated from package.yaml by hpack version 0.20.0.
 --
 -- see: https://github.com/sol/hpack
+--
+-- hash: 5ed70df28f25e207826808b23686f1af085b89fce745b9c95d8bca0878d20835
 
 name:           composite-ekg
 version:        0.4.2.0
@@ -21,7 +23,7 @@ library
   default-extensions: DataKinds FlexibleContexts FlexibleInstances GeneralizedNewtypeDeriving MultiParamTypeClasses OverloadedStrings PolyKinds ScopedTypeVariables StandaloneDeriving StrictData TemplateHaskell TupleSections TypeFamilies TypeOperators ViewPatterns
   ghc-options: -Wall -O2
   build-depends:
-      base >= 4.7 && < 5
+      base >=4.7 && <5
     , composite-base
     , ekg
     , ekg-core
@@ -30,4 +32,6 @@ library
     , vinyl
   exposed-modules:
       Composite.Ekg
+  other-modules:
+      Paths_composite_ekg
   default-language: Haskell2010

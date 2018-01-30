@@ -1,6 +1,8 @@
--- This file has been generated from package.yaml by hpack version 0.17.0.
+-- This file has been generated from package.yaml by hpack version 0.20.0.
 --
 -- see: https://github.com/sol/hpack
+--
+-- hash: eb4e336809b75f5236ee34a075b575845fb077f12b2592da21f886b755ed6490
 
 name:           composite-opaleye
 version:        0.4.2.0
@@ -21,7 +23,7 @@ library
   default-extensions: DataKinds FlexibleContexts FlexibleInstances LambdaCase MultiParamTypeClasses OverloadedStrings PatternSynonyms PolyKinds ScopedTypeVariables StrictData TemplateHaskell TypeFamilies TypeOperators ViewPatterns
   ghc-options: -Wall -O2
   build-depends:
-      base >= 4.7 && < 5
+      base >=4.7 && <5
     , bytestring
     , composite-base
     , lens
@@ -39,6 +41,8 @@ library
       Composite.Opaleye.TH
       Composite.Opaleye.Update
       Composite.Opaleye.Util
+  other-modules:
+      Paths_composite_opaleye
   default-language: Haskell2010
 
 test-suite composite-opaleye-test
@@ -49,9 +53,12 @@ test-suite composite-opaleye-test
   default-extensions: DataKinds FlexibleContexts FlexibleInstances LambdaCase MultiParamTypeClasses OverloadedStrings PatternSynonyms PolyKinds ScopedTypeVariables StrictData TemplateHaskell TypeFamilies TypeOperators ViewPatterns
   ghc-options: -Wall -O2 -threaded -rtsopts -with-rtsopts=-N -fno-warn-orphans
   build-depends:
-      base >= 4.7 && < 5
+      QuickCheck
+    , base >=4.7 && <5
     , bytestring
     , composite-base
+    , composite-opaleye
+    , hspec
     , lens
     , opaleye
     , postgresql-simple
@@ -60,9 +67,7 @@ test-suite composite-opaleye-test
     , template-haskell
     , text
     , vinyl
-    , QuickCheck
-    , composite-opaleye
-    , hspec
   other-modules:
       UpdateSpec
+      Paths_composite_opaleye
   default-language: Haskell2010

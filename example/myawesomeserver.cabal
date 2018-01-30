@@ -1,6 +1,8 @@
--- This file has been generated from package.yaml by hpack version 0.15.0.
+-- This file has been generated from package.yaml by hpack version 0.20.0.
 --
 -- see: https://github.com/sol/hpack
+--
+-- hash: f95c99ebce7124e2d3ce8148a79dec2eaf6a17c0e34e17435e56a1945c4b9993
 
 name:           myawesomeserver
 version:        0.0.1
@@ -21,8 +23,8 @@ library
   default-extensions: Arrows ConstraintKinds DataKinds DeriveGeneric FlexibleContexts FlexibleInstances GADTs GeneralizedNewtypeDeriving LambdaCase MultiParamTypeClasses NoImplicitPrelude OverloadedStrings PatternSynonyms QuasiQuotes RankNTypes ScopedTypeVariables StandaloneDeriving TemplateHaskell TypeApplications TypeFamilies TypeOperators ViewPatterns
   ghc-options: -Wall -Werror
   build-depends:
-      base >= 4.7 && < 5
-    , aeson
+      aeson
+    , base >=4.7 && <5
     , bytestring
     , classy-prelude
     , composite-aeson
@@ -51,6 +53,8 @@ library
       Logging
       Metrics
       Types
+  other-modules:
+      Paths_myawesomeserver
   default-language: Haskell2010
 
 executable myawesomeserver-exe
@@ -60,8 +64,8 @@ executable myawesomeserver-exe
   default-extensions: Arrows ConstraintKinds DataKinds DeriveGeneric FlexibleContexts FlexibleInstances GADTs GeneralizedNewtypeDeriving LambdaCase MultiParamTypeClasses NoImplicitPrelude OverloadedStrings PatternSynonyms QuasiQuotes RankNTypes ScopedTypeVariables StandaloneDeriving TemplateHaskell TypeApplications TypeFamilies TypeOperators ViewPatterns
   ghc-options: -Wall -Werror -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >= 4.7 && < 5
-    , aeson
+      aeson
+    , base >=4.7 && <5
     , bytestring
     , classy-prelude
     , composite-aeson
@@ -74,6 +78,7 @@ executable myawesomeserver-exe
     , fast-logger
     , lens
     , monad-logger
+    , myawesomeserver
     , opaleye
     , postgresql-simple
     , product-profunctors
@@ -83,5 +88,6 @@ executable myawesomeserver-exe
     , servant-server
     , vinyl
     , warp
-    , myawesomeserver
+  other-modules:
+      Paths_myawesomeserver
   default-language: Haskell2010
